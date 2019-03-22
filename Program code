@@ -1,1 +1,27 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println ("Введите первое слово:");
+        String text1 = in.next();
+        System.out.println ("Введите второе слово:");
+        String text2 = in.next();
+        in.close();
+        int len1 = text1.length();
+        int len2 = text2.length();
+        if (text1.equals(text2)) {
+            System.out.println("Отлично! Слова одинаковы");
+        }
+        else if (text1.equalsIgnoreCase(text2)) {
+            System.out.println("Хорошо. Почти одинаковы");
+        }
+        else if (len1 == len2) {
+            System.out.println("Ну, хоть одной длины!");
+        }
+        else {
+            System.out.println("Не годится!");
+        }
+    }
+}
